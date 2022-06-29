@@ -112,8 +112,8 @@ public class AppActivity extends AppCompatActivity {
         CardView start = (CardView) findViewById(R.id.start_card);
         CardView extract = (CardView) findViewById(R.id.extract_card);
         CardView uninstall = (CardView) findViewById(R.id.uninstall_card);
-        CardView cache = (CardView) findViewById(R.id.cache_card);
-        CardView clearData = (CardView) findViewById(R.id.clear_data_card);
+        //CardView cache = (CardView) findViewById(R.id.cache_card);
+        //CardView clearData = (CardView) findViewById(R.id.clear_data_card);
         fab = (FloatingActionsMenu) findViewById(R.id.fab);
         FloatingActionButton fab_share = (FloatingActionButton) findViewById(R.id.fab_a);
         final FloatingActionButton fab_hide = (FloatingActionButton) findViewById(R.id.fab_b);
@@ -289,7 +289,7 @@ public class AppActivity extends AppCompatActivity {
                     }
                 });
             }
-            cache.setVisibility(View.VISIBLE);
+            /*cache.setVisibility(View.VISIBLE);
             cache.setOnClickListener(new View.OnClickListener() {
                 @RequiresApi(api = Build.VERSION_CODES.R)
                 @Override
@@ -297,32 +297,32 @@ public class AppActivity extends AppCompatActivity {
 
 
 
-                    /*MaterialDialog dialog = UtilsDialog.showTitleContentWithProgress(context
+                    *//*MaterialDialog dialog = UtilsDialog.showTitleContentWithProgress(context
                             , getResources().getString(R.string.dialog_cache_deleting)
                             , getResources().getString(R.string.dialog_cache_deleting_description));
                     File file = new File(appInfo.getSource());
                     boolean ck =file.exists();
                     new DeleteDataInBackground(context, dialog, appInfo.getData() + "/cache/**"
-                            , getResources().getString(R.string.dialog_cache_success_description, appInfo.getName())).execute();*/
+                            , getResources().getString(R.string.dialog_cache_success_description, appInfo.getName())).execute();*//*
                 }
-            });
+            });*/
 
 
 
-            clearData.setVisibility(View.VISIBLE);
+            /*clearData.setVisibility(View.VISIBLE);
             clearData.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     UtilsDialog.showTitleContent(context, "Information",
                             "this feature is comming up");
 
-                    /*MaterialDialog dialog = UtilsDialog.showTitleContentWithProgress(context
+                    *//*MaterialDialog dialog = UtilsDialog.showTitleContentWithProgress(context
                             , getResources().getString(R.string.dialog_clear_data_deleting)
                             , getResources().getString(R.string.dialog_clear_data_deleting_description));
                     new DeleteDataInBackground(context, dialog, appInfo.getData() + "/**"
-                            , getResources().getString(R.string.dialog_clear_data_success_description, appInfo.getName())).execute();*/
+                            , getResources().getString(R.string.dialog_clear_data_success_description, appInfo.getName())).execute();*//*
                 }
-            });
+            });*/
         } else if (appInfo.isSystem()) {
             uninstall.setVisibility(View.GONE);
             uninstall.setForeground(null);

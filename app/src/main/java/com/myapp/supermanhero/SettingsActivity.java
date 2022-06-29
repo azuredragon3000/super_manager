@@ -98,7 +98,7 @@ public class SettingsActivity extends AppCompatActivity implements
 
        // protected Toolbar toolbar;
         protected AppPreferences appPreferences;
-        protected Preference prefVersion,prefLicense, prefDeleteAll, prefDefaultValues, prefNavigationBlack,prefCustomPath;
+        protected Preference prefVersion, prefNavigationBlack;
         protected CustomPreference prefPrimaryColor,prefFABColor;
         protected ListPreference prefCustomFilename, prefSortMode;
         protected DirectoryChooserFragment chooseDialog;
@@ -113,15 +113,15 @@ public class SettingsActivity extends AppCompatActivity implements
             prefs.registerOnSharedPreferenceChangeListener(this);
 
             prefVersion = findPreference("prefVersion");
-            prefLicense = findPreference("prefLicense");
+            //prefLicense = findPreference("prefLicense");
             prefPrimaryColor = (CustomPreference) findPreference("prefPrimaryColor");
             prefFABColor =  (CustomPreference) findPreference("prefFABColor");
-            prefDeleteAll = findPreference("prefDeleteAll");
-            prefDefaultValues = findPreference("prefDefaultValues");
+            //prefDeleteAll = findPreference("prefDeleteAll");
+            //prefDefaultValues = findPreference("prefDefaultValues");
             prefNavigationBlack = findPreference("prefNavigationBlack");
             prefCustomFilename = (ListPreference) findPreference("prefCustomFilename");
             prefSortMode = (ListPreference)  findPreference("prefSortMode");
-            prefCustomPath = findPreference("prefCustomPath");
+            //prefCustomPath = findPreference("prefCustomPath");
 
             if(Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP){
                 prefPrimaryColor.setEnabled(false);;
@@ -150,7 +150,7 @@ public class SettingsActivity extends AppCompatActivity implements
 
             setCustomPathSummary();
 
-            prefDeleteAll.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            /*prefDeleteAll.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
                     prefDeleteAll.setSummary(R.string.deleting);
@@ -164,9 +164,9 @@ public class SettingsActivity extends AppCompatActivity implements
                     prefDeleteAll.setEnabled(true);
                     return false;
                 }
-            });
+            });*/
 
-            prefCustomPath.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            /*prefCustomPath.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
                 public boolean onPreferenceClick(Preference preference) {
                     final DirectoryChooserConfig chooserConfig = DirectoryChooserConfig.builder()
@@ -179,7 +179,7 @@ public class SettingsActivity extends AppCompatActivity implements
                     chooseDialog.show(getActivity().getFragmentManager(),null);
                     return false;
                 }
-            });
+            });*/
         }
 
 
@@ -191,9 +191,9 @@ public class SettingsActivity extends AppCompatActivity implements
                 setCustomFilenameSummary();
             }else if(pref == prefSortMode){
                 setSortModeSummary();
-            }else if(pref == prefCustomPath){
+            }/*else if(pref == prefCustomPath){
                 setCustomPathSummary();
-            }
+            }*/
         }
 
         private void setSortModeSummary() {
@@ -214,12 +214,12 @@ public class SettingsActivity extends AppCompatActivity implements
         }
 
         private void setCustomPathSummary() {
-            String path = appPreferences.getCustomPath(UtilsApp.getDefaultAppFolder().getPath());
+           /* String path = appPreferences.getCustomPath(UtilsApp.getDefaultAppFolder().getPath());
             if(path.equals(UtilsApp.getDefaultAppFolder().getPath())){
                 prefCustomPath.setSummary(getResources().getString(R.string.button_default)+": "+UtilsApp.getDefaultAppFolder().getPath());
             }else{
                 prefCustomPath.setSummary(path);
-            }
+            }*/
         }
 
         @Override

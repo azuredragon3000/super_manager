@@ -4,7 +4,7 @@
 
     <PreferenceCategory app:title="@string/action_setting">
 
-        <Preference
+        <!--<Preference
             app:key="prefDeleteAll"
             app:title="@string/settings_delete_all"
             android:summary="@string/settings_delete_all_description"
@@ -13,7 +13,7 @@
         <Preference
             android:key="prefCustomPath"
             android:title="@string/settings_custom_path"
-            />
+            />-->
 
         <ListPreference
             android:key="prefCustomFilename"
@@ -54,20 +54,20 @@
             android:summary="@string/settings_navigation_black_description"
             android:defaultValue="false"
             />
-        <Preference
+        <!--<Preference
             android:key="prefDefaultValues"
             android:title="@string/settings_default_customization"
             android:summary="@string/settings_default_customization_description"
-            />
+            />-->
     </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/action_about"
         >
-        <Preference
+        <!--<Preference
             android:key="prefLicense"
             android:title="@string/settings_license"
-            />
+            />-->
 
         <Preference
             android:key="prefVersion"

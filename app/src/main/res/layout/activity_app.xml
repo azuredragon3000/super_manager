@@ -188,7 +188,8 @@
                     android:ellipsize="end"
                     android:singleLine="true" />
             </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+
+            <!--<androidx.cardview.widget.CardView
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_below="@id/uninstall_card"
                 android:id="@+id/cache_card"
@@ -218,6 +219,7 @@
                     android:ellipsize="end"
                     android:singleLine="true" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_below="@id/cache_card"
@@ -248,7 +250,9 @@
                     android:textSize="14sp"
                     android:ellipsize="end"
                     android:singleLine="true" />
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
+
+
         </RelativeLayout>
     </ScrollView>
 
