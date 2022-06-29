@@ -1,0 +1,65 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.myapp.supermanhero"
+        minSdk 22
+        targetSdk 32
+        versionCode 275
+        versionName "275.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.preference:preference:1.2.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'commons-io:commons-io:2.4'
+    implementation 'com.github.azuredragon3000:UILibAndroid:1.4.6'
+
+    implementation ('com.github.afollestad.material-dialogs:core:0.8.5.3@aar'){transitive = true;}
+    implementation ('com.github.afollestad.material-dialogs:commons:0.8.5.3@aar'){transitive = true;}
+    implementation "com.mikepenz:materialdrawer:6.1.2"
+    implementation 'com.mikepenz:iconics-core:2.7.2'
+    implementation('com.mikepenz:google-material-typeface:1.2.0.1') {
+        transitive = false
+    }
+
+    implementation 'com.pnikosis:materialish-progress:1.7'
+    implementation 'com.yalantis:phoenix:1.2.2'
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+
+    //implementation 'net.rdrei.android.dirchooser:library:3.2@aar'
+
+    //implementation 'com.github.guardian:Option:e933c3a31d'
+    //implementation 'com.github.navasmdc:MaterialDesign:1.5@aar'
+
+    implementation 'com.github.frankiesardo:auto-parcel:0.3.1'
+    implementation 'com.google.auto.value:auto-value:1.1'
+    annotationProcessor 'com.github.frankiesardo:auto-parcel-processor:0.3.1'
+    implementation 'com.google.android.gms:play-services-ads:20.6.0'
+
+}

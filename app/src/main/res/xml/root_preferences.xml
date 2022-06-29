@@ -1,0 +1,78 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <PreferenceCategory app:title="@string/action_setting">
+
+        <Preference
+            app:key="prefDeleteAll"
+            app:title="@string/settings_delete_all"
+            android:summary="@string/settings_delete_all_description"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            android:key="prefCustomPath"
+            android:title="@string/settings_custom_path"
+            />
+
+        <ListPreference
+            android:key="prefCustomFilename"
+            android:title="@string/settings_custom_filename"
+            android:entries="@array/filenameEntries"
+            android:entryValues="@array/filenameValues"
+            android:defaultValue="1"
+            />
+
+        <ListPreference
+            android:key="prefSortMode"
+            android:title="@string/settings_sort_mode"
+            android:entries="@array/sortEntries"
+            android:entryValues="@array/sortValues"
+            android:defaultValue="1"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/settings_customization">
+
+        <com.myapp.mylibrary.widget.CustomPreference
+            app:key="prefPrimaryColor"
+            app:title="@string/settings_primary_color"
+            android:defaultValue="@color/primary"
+            android:summary="@string/settings_primary_color_description"
+            />
+
+        <com.myapp.mylibrary.widget.CustomPreference
+            app:key="prefFABColor"
+            app:title="@string/settings_fab_color"
+            android:defaultValue="@color/fab"
+            android:summary="@string/settings_fab_color_description"
+            />
+
+        <CheckBoxPreference
+            android:key="prefNavigationBlack"
+            android:title="@string/settings_navigation_black"
+            android:summary="@string/settings_navigation_black_description"
+            android:defaultValue="false"
+            />
+        <Preference
+            android:key="prefDefaultValues"
+            android:title="@string/settings_default_customization"
+            android:summary="@string/settings_default_customization_description"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/action_about"
+        >
+        <Preference
+            android:key="prefLicense"
+            android:title="@string/settings_license"
+            />
+
+        <Preference
+            android:key="prefVersion"
+            android:title="@string/app_name"
+            android:summary="@string/settings_about"
+            />
+    </PreferenceCategory>
+</PreferenceScreen>
