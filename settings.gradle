@@ -14,5 +14,5 @@ dependencyResolutionManagement {
         //maven { url 'http://guardian.github.com/maven/repo-releases' }
     }
 }
-rootProject.name = "Drawer"
+rootProject.name = "SuperManager"
 include ':app'
